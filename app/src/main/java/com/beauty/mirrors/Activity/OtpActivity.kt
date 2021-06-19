@@ -30,13 +30,11 @@ class OtpActivity : AppCompatActivity() {
 
     private fun initView() {
         var img_back: AppCompatImageView = findViewById(R.id.img_back)
-
         img_back.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 val intent = Intent(applicationContext, LoginActivity::class.java)
                 startActivity(intent)
             }
-
         })
 
         var btn_login: AppCompatButton = findViewById(R.id.btn_login)

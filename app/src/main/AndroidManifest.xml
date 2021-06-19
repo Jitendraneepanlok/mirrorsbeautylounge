@@ -30,6 +30,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mirrors">
+        <activity android:name=".Activity.HomeActivity"></activity>
         <activity
             android:name=".Activity.OtpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
