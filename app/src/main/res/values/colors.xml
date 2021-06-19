@@ -7,5 +7,28 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="pink">#FFC0CB</color>
+    <color name="pink">#ff9ba1</color>
+    <color name="black_transparent">#99000000</color>
+    <color name="transparent">#0fff</color>
+    <color name="gray">#AEA9A9</color>
+    <color name="trasparygray">#c3c3c3</color>
+    <color name="red">#ff2626</color>
+    <color name="timer_color">#ff9ba1</color>
+    <color name="resend_color">#b7b7b7</color>
+
+    <array name="array_dot_active">
+        <item>@color/gray</item>
+        <item>@color/gray</item>
+        <item>@color/gray</item>
+        <item>@color/gray</item>
+        <item>@color/gray</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/trasparygray</item>
+        <item>@color/trasparygray</item>
+        <item>@color/trasparygray</item>
+        <item>@color/trasparygray</item>
+        <item>@color/trasparygray</item>
+    </array>
 </resources>

@@ -2,5 +2,20 @@
     <string name="app_name">Mirrors</string>
     <string name="landing_name">MIRRORS</string>
     <string name="landing_name_2">BEAUTY LOUNGE</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="login_account">Login Account</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="no">568585061</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="otp_page_text">Enter OTP code we just sent to your mobile no</string>
+    <string name="otp_error">Entered wrong OTP</string>
+    <string name="login">Login</string>
+    <string name="edit_number">Edit Number</string>
+    <string name="resend_in">Resend in</string>
+    <string name="time">00:30</string>
+    <string name="login_sucess">Login Sucessfully</string>
+    <string name="redirect_to_app">We are redirecting to app</string>
 
 </resources>

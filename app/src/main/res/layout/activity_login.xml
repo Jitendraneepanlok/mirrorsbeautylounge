@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/pink"
+            android:id="@+id/rl_first">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="@string/landing_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_below="@+id/tv1"
+                android:text="@string/landing_name_2"
+                android:textColor="@color/white"
+                android:id="@+id/tv2"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv2"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/white_corner_shape">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/txt_login_account"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/login_account"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/trasparygray"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_below="@+id/txt_login_account"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="@string/mobile_no"
+                    android:id="@+id/txt_mobile_no"
+                    android:paddingLeft="@dimen/_20sdp"/>
+
+
+                <com.hbb20.CountryCodePicker
+                    app:ccp_hintExampleNumber="true"
+                    android:id="@+id/country_code_picker"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:ccp_defaultNameCode="ae"
+                    app:ccp_defaultPhoneCode="971"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_mobile_no"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/no"
+                    android:layout_below="@+id/txt_mobile_no"
+                    android:layout_toRightOf="@+id/country_code_picker"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/et_contact_no"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:backgroundTint="@color/black"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_contact_no"
+                    android:layout_marginTop="@dimen/_80sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/get_otp"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/btn_otp"
+                    android:background="@drawable/btn_pink"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
