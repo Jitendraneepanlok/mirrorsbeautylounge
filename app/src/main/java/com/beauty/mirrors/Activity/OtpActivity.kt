@@ -9,7 +9,6 @@ import android.view.Gravity
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
@@ -17,9 +16,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
 import com.alimuzaffar.lib.pin.PinEntryEditText
 import com.beauty.mirrors.R
-import java.text.SimpleDateFormat
-import java.util.*
-import java.util.concurrent.TimeUnit
+import java.time.Clock.tick
+
 
 class OtpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,39 +29,29 @@ class OtpActivity : AppCompatActivity() {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.pink));
         }
+        val maxTimeInMilliseconds: Long = 30000
+        startTimer(maxTimeInMilliseconds, 1000)
         initView()
-        setTimer()
 
     }
 
-    private fun setTimer() {
+    private fun startTimer(maxTimeInMilliseconds: Long, i: Int) {
         var txt_time: AppCompatTextView = findViewById(R.id.txt_time)
-        val timer = object : CountDownTimer(30000, 1000) {
+        val count: CountDownTimer
 
+        count = object : CountDownTimer(3000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                txt_time?.setText(
-                    "" + String.format(
-                        "%d min, %d sec",
-                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
-                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
-                                TimeUnit.MINUTES.toSeconds(
-                                    TimeUnit.MILLISECONDS.toMinutes(
-                                        millisUntilFinished
-                                    )
-                                )
-                    )
-                );
+                val remainedSecs = millisUntilFinished / 1000
+                txt_time.setText("" + remainedSecs / 60 + ":" + remainedSecs % 60)
             }
 
             override fun onFinish() {
-                val toast = Toast.makeText(applicationContext, "Done", Toast.LENGTH_SHORT)
-                toast.show()
-
+                txt_time.setText("00:00")
+                cancel()
             }
-
-        }
-        timer.start()
+        }.start()
     }
+
 
     private fun initView() {
         var txt_pin_entry: PinEntryEditText = findViewById(R.id.txt_pin_entry)
@@ -100,17 +88,14 @@ class OtpActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.custom_login_layout)
         dialog.setCancelable(true)
 
-        /*val noBtn = dialog.findViewById(R.id.noBtn) as TextView
-        yesBtn.setOnClickListener {
+        val txt_redirecting :AppCompatTextView = dialog.findViewById(R.id.txt_redirecting)
+        txt_redirecting.setOnClickListener {
+            startActivity(Intent(applicationContext,HomeActivity::class.java))
             dialog.dismiss()
-        }*/
+        }
         dialog.window!!.setGravity(Gravity.CENTER)
-        dialog.window!!.setLayout(
-            WindowManager.LayoutParams.MATCH_PARENT,
-            WindowManager.LayoutParams.WRAP_CONTENT
-        )
+        dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
         dialog.show()
-
 
     }
 }

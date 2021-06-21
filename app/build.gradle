@@ -57,6 +57,8 @@ dependencies {
         // androidx.appcompat as a dependency in your app.
         exclude group: 'androidx.appcompat', module: 'appcompat'
     }
+    // For Autoslider like banner advertisment
+    implementation 'com.synnapps:carouselview:0.1.5'
 
 
 }

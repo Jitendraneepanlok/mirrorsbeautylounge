@@ -44,7 +44,8 @@
             android:textColor="@color/trasparygray"
             android:layout_marginTop="@dimen/_16sdp"
             android:layout_below="@+id/txt_sucess"
-            android:textSize="@dimen/_12sdp" />
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/txt_redirecting"/>
 
 
 
