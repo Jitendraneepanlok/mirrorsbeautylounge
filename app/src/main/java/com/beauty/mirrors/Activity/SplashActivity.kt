@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             // This method will be executed once the timer is over
             // Start your app slider activity
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SliderActivity::class.java))
             // close this activity
             finish()
         }, SPLASH_TIME_OUT)
