@@ -107,9 +107,12 @@
                         android:id="@+id/txt_pin_entry"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:cursorVisible="false"
+                        android:cursorVisible="true"
                         android:digits="12345"
+                        android:textIsSelectable="false"
+                        android:hint="12345"
                         android:inputType="number"
+                        app:pinLineColors="@color/gray"
                         android:maxLength="5"
                         android:gravity="center"
                         android:layout_marginLeft="@dimen/_10sdp"
@@ -117,11 +120,11 @@
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:backgroundTint="@color/red"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/gray"
                         android:layout_below="@+id/txt_otp_error"
-                        android:textIsSelectable="false"
                         android:textSize="20sp"
-                        android:layout_marginTop="@dimen/_29sdp"/>
+                        android:layout_marginTop="@dimen/_29sdp"
+                        />
 
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -133,7 +136,8 @@
                         android:paddingLeft="@dimen/_11sdp"
                         android:id="@+id/txt_edit_mobile"
                         android:layout_marginTop="@dimen/_9sdp"
-                        android:layout_below="@+id/txt_pin_entry"/>
+                        android:layout_below="@+id/txt_pin_entry"
+                        />
 
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -141,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txt_pin_entry"
-                        android:layout_marginLeft="170dp"
+                        android:layout_marginLeft="155dp"
                         android:layout_marginTop="11dp"
                         android:layout_toRightOf="@+id/txt_edit_mobile"
                         android:text="@string/resend_in"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_5sdp"
+    android:background="#FFD0D2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/landing_name"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/tv1"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/landing_name_2"
+        android:textColor="@color/pink"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="220dp"
+        android:layout_toRightOf="@+id/tv1"
+        android:scaleType="fitXY"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_cart" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location"
+        android:layout_toRightOf="@+id/img_cart"
+        android:scaleType="fitXY"/>
+
+</RelativeLayout>

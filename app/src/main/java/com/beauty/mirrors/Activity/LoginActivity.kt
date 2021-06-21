@@ -14,7 +14,6 @@ import com.beauty.mirrors.R
 import com.hbb20.CountryCodePicker
 
 class LoginActivity : AppCompatActivity()/*, CountryCodePicker.OnCountryChangeListener*/ {
-    private var ccp: CountryCodePicker? = null
     private var countryCode: String? = null
     private var countryName: String? = null
 
@@ -41,7 +40,9 @@ class LoginActivity : AppCompatActivity()/*, CountryCodePicker.OnCountryChangeLi
             }
 
         })
-        ccp = findViewById(R.id.country_code_picker)
+        var ccp: CountryCodePicker? = findViewById(R.id.country_code_picker)
+        ccp?.setCcpClickable(false)
+
 //        ccp!!.setOnCountryChangeListener(this)
         //to set default country code as Japan
 //        ccp!!.setDefaultCountryUsingNameCode("JP")
