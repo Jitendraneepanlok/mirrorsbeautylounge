@@ -4,13 +4,12 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.ImageView
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.beauty.mirrors.R
-import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
-import com.synnapps.carouselview.ViewListener
+import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -33,7 +32,6 @@ class HomeActivity : AppCompatActivity() {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.pink));
         }
 
-        var carouselView: CarouselView = findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.size);
 
         carouselView.setImageListener(imageListener);

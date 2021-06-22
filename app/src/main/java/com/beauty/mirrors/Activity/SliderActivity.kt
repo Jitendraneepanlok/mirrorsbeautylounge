@@ -32,6 +32,7 @@ class SliderActivity : AppCompatActivity() {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.red));
         }
 
+
         val adapter = IntroSliderAdapter(this)
         vpIntroSlider.adapter = adapter
         fragmentList.addAll(listOf(Intro1Fragment(), Intro2Fragment(), Intro3Fragment(), Intro4Fragment()))

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.beauty.mirrors"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -59,6 +59,8 @@ dependencies {
     }
     // For Autoslider like banner advertisment
     implementation 'com.synnapps:carouselview:0.1.5'
+
+
 
 
 }

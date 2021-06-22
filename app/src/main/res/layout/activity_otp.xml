@@ -147,6 +147,7 @@
                         android:layout_below="@+id/txt_pin_entry"
                         android:layout_marginLeft="155dp"
                         android:layout_marginTop="11dp"
+                        android:visibility="invisible"
                         android:layout_toRightOf="@+id/txt_edit_mobile"
                         android:text="@string/resend_in"
                         android:textColor="@color/resend_color"
