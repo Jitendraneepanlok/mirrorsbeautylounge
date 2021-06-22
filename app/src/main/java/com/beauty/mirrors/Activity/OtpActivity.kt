@@ -29,7 +29,7 @@ class OtpActivity : AppCompatActivity() {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.pink));
         }
-        val maxTimeInMilliseconds: Long = 30000
+        val maxTimeInMilliseconds: Long = 3000
         startTimer(maxTimeInMilliseconds, 1000)
         initView()
 
