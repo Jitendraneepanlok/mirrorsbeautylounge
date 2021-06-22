@@ -6,12 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Activity.HomeActivity">
 
-    <include
-        android:id="@+id/tool_home"
-        layout="@layout/home_toolbar"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFD0D2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/landing_name"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="@string/landing_name_2"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/tv1"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/img_cart"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_location" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_area"
@@ -20,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tool_home">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -31,18 +83,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                 <com.synnapps.carouselview.CarouselView
-                     android:id="@+id/carouselView"
-                     android:layout_width="match_parent"
-                     android:layout_height="@dimen/_140sdp"
-                     app:fillColor="#00000000"
-                     app:pageColor="#00000000"
-                     android:layout_margin="@dimen/_15sdp"
-                     app:radius="5dp"
-                     app:strokeColor="#00000000"
-                     />
-
-
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    app:fillColor="#00000000"
+                    app:pageColor="#00000000"
+                    app:radius="5dp"
+                    app:strokeColor="#00000000" />
 
 
             </RelativeLayout>
